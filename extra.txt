@@ -1,0 +1,27 @@
+How to start node Project
+-> Install node in your system
+-> When we install nod, NPM automatically install
+-> then create a folder 
+-> then run a command "node init" 
+-> to install any package command : "npm i <package_name>
+
+Express
+-> Express is a Web Application framework for Node.js
+-> It provide a set of features for web and mobile applicationsand it allows you to easily create sever-side logic using javascript.
+-> it provide powerful way to handle HTTP request and response
+
+
+Package.json
+-> Its a file automatically generated when we run a command "npm init".
+-> It manage the dependencies of your project and provide a information about the project name, author, description.
+
+-> "name" : project name,
+-> "script: a list of scripts which run when we use a comand : "npm run"
+
+
+Nodemon
+-> its a utility that automatically start your node.js application whenever you make any change.
+-> to use it we need to install a package called nodemon.
+   command : npm i  nodemon
+-> after that you can run project with command "nodemon filename"
+

@@ -1,0 +1,159 @@
+HTTP Request 
+> HTTP request is a message sent from client side to server side to request some information or perform action.
+> Express allow you to define route handlers for diferent HTTP methods (such as GET, POST, PUT, DELETE)
+
+> CRUD
+> get -- Read
+> post -- Create
+> put -- Update
+> delete -- delete
+
+Ex for "get" request
+    let express = require("express");
+    let app = express()
+
+    app.get("/",function(req,res){
+        res.send("Server Started..");
+    })
+
+    app.listen(3000);
+
+
+What is MongoDB?
+MongoDB is a cross platform, document-oriented, NOSQL database.
+MongoDB use disributed architecture.
+mondoDB is Open Sourse Database Management system
+it store data in BSON (Binary JSON) formate.
+
+
+setup local MongoDB
+> Install MongoDB (download cummunity server)
+> create "data" folder in c drive.
+> Inside "data" folder create "db" folder
+> Open First cmd
+  -> tyoe a command : "mongod"
+  -> this will start the mongoDB server
+  -> MongoDB server is a proccess that manage the strage and retrivals of data.
+
+> Open Second cmd
+  -> type a command : "mongo"
+  -> this wil start mongoDB Client
+  -> MongoDB client is a process that connect to a mondoDB server and send rewuest to it.
+
+
+
+
+mongoDb is nosql database
+[
+  {
+    _id : 1,
+    name : "Vandana"
+  },
+  {
+    _id:2,
+    name:"Student2",
+    age: 20
+  }
+]
+
+
+SQL    --   NOSQL
+database    database
+table       collection
+row         document
+select      find
+insert      insert
+delete      delete
+update      update
+
+
+commands 
+1. to check all database
+   "show dbs"
+
+2. Go inside particular database or create new database
+   "use database_name"
+
+3. To check current database
+   "db"
+
+4. To see all collection
+   "show collections"
+
+5. To find all data
+   "db.collection_name.find()
+
+6. CRUD -- Create, Read, Update, delete
+ 
+   1. Create Operation
+      -> Add New Document to collection
+      -> if collection does't exist, create new collection and then insert data into it.
+      -> you can enter single and multiple documents
+
+      1. Single Document
+         "db.collection.insertOne()
+          ex : db.studentData.insertOne({
+                ... _id : 1,
+                ... name : "Vandana"
+                ... })
+
+      2. Multiple Document
+         "db.collection.insertMany()
+         ex: db.studentData.insertMany( 
+          [
+            { _id:2,
+              name : "Rohit",
+              age : 20 
+            },
+            { 
+              name : "Kajal",
+              age : 30 
+            }
+          ])
+
+
+Read Operation
+
+1. to Read al document from a particular collection
+  "db.collection.find()"
+
+2. To Read a specific data
+   "db.collection.find({name : "vandana"})"
+  ex : db.studentData.find({name : "Vandana"})
+  ex : db.studentData.find({age : {$gte : 18} })
+
+
+Update Document
+1. db.collection_name.updateOne()
+   or 
+   db.collection_name.update()
+
+
+2. db.collection_name.updateMany()
+   ex : 
+   db.studentData.updateMany(
+... {name : "Arpit Chouhan"},
+... {$set : {name : "Vandana"}}
+... )
+
+3. Replace 
+   "db.collection.replaceOne()"
+   ex : db.studentData.replaceOne( {name : "Kajal"}, {name : "Arohi", age : 20, location : "Mumbai"})
+
+
+
+Delete Document
+1. delete all document
+   "db.collection_name.deleteMany({})"
+
+2. Delete all document match specific condition
+   "db.collection_name.deleteMany({name : "Vandana"})
+
+3. Delete One document which match this condition
+  "db.collection_name.deleteOne({name : "Vandana"})"
+
+
+  <iframe class='sproutvideo-player' src='https://videos.sproutvideo.com/embed/799fdcbd1518e4c0f0/099c032f78da673d' width='630' height='354' frameborder='0' allowfullscreen referrerpolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
+
+
+  <iframe class='sproutvideo-player' src='https://videos.sproutvideo.com/embed/d39fdcbd1518e4c25a/9892d2b60649c2bd' width='630' height='354' frameborder='0' allowfullscreen referrerpolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
