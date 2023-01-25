@@ -150,10 +150,11 @@ Delete Document
    "db.collection_name.deleteMany({name : "Vandana"})
 
 3. Delete One document which match this condition
-  "db.collection_name.deleteOne({name : "Vandana"})"
+  "db.collection_name.deleteOne({name : "Vandana"})
 
 
-  <iframe class='sproutvideo-player' src='https://videos.sproutvideo.com/embed/799fdcbd1518e4c0f0/099c032f78da673d' width='630' height='354' frameborder='0' allowfullscreen referrerpolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
 
+Connectivity between Node.js and MongoDB
+> mongodb  --> npm i mongodb
+> use MongoClient
 
-  <iframe class='sproutvideo-player' src='https://videos.sproutvideo.com/embed/d39fdcbd1518e4c25a/9892d2b60649c2bd' width='630' height='354' frameborder='0' allowfullscreen referrerpolicy='no-referrer-when-downgrade' title='Video Player'></iframe>
